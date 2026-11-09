@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <script>
+      try {
+        const saved = localStorage.getItem('mgb-nsil2-scheme');
+        document.querySelector('meta[name="color-scheme"]').content =
+          saved === 'dark' ? 'dark' : 'light';
+      } catch (e) {}
+    </script>
+    <meta name="text-scale" content="scale" />
+    <title>Neuroscience Institute Launchpad | Mass General Brigham</title>
+    <meta
+      name="description"
+      content="The Mass General Brigham Neuroscience Institute (NSI) Launchpad is a two-stage incubator and accelerator pathway supporting clinical and scientific neuroscience ventures across MGH, BWH, and Harvard Medical School."
+    />
+    <link rel="icon" type="image/png" href="./assets/launchpad-rocket.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+
+    <!-- Mass General Brigham Institutional Utility Bar -->
+    <div class="utility-bar">
+      <div class="container utility-bar__inner">
+        <div class="utility-bar__brand">
+          <img
+            src="./assets/mgb-logo-white.svg"
+            alt="Mass General Brigham"
+            width="148"
+            height="22"
+            style="block-size: 1.15rem; inline-size: auto;"
+          />
+          <span class="utility-bar__divider" aria-hidden="true"></span>
+          <span>Neuroscience Institute (NSI) &middot; In Partnership with MGB Innovation</span>
+        </div>
+        <div class="utility-bar__links">
+          <a href="https://redcap.link/msfah7gg" target="_blank">Community Feedback Survey</a>
+          <a href="https://innovation.massgeneralbrigham.org/" target="_blank">MGB Innovation</a>
+          <a href="https://giving.massgeneral.org/" target="_blank">Philanthropic Giving</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Primary Institutional Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="#" class="brand-lockup" aria-label="Mass General Brigham Neuroscience Institute Launchpad">
+          <img
+            src="./assets/launchpad-lockup.png"
+            alt="Neuroscience Institute Launchpad — Mass General Brigham"
+            width="827"
+            height="176"
+            class="brand-lockup__img"
+          />
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list">
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#pathway">Stage 1 &amp; Stage 2</a></li>
+            <li><a href="#schedule">Schedule &amp; Governance</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#engage">Teams, Investors &amp; Philanthropy</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <button
+            type="button"
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="Toggle dark or light color scheme"
+          >
+            Dark Theme
+          </button>
+          <button
+            type="button"
+            class="btn btn--primary btn--sm"
+            commandfor="inquiry-modal"
+            command="show-modal"
+          >
+            Inquire
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <!-- Institutional Masthead -->
+      <section class="masthead">
+        <div class="container masthead__grid">
+          <div>
+            <span class="section-kicker">Mass General Brigham Neuroscience Institute</span>
+            <h1 class="masthead__title">
+              Translating Clinical and Scientific Neuroscience into Venture-Ready Companies
+            </h1>
+            <p class="masthead__lead">
+              The <strong>NSI Launchpad</strong> is an incubator-accelerator pathway within the Mass General Brigham Neuroscience Institute, developed in partnership with <strong>MGB Innovation</strong>. It provides faculty, clinicians, trainees, and staff across Massachusetts General Hospital and Brigham and Women&rsquo;s Hospital with a structured route from early discovery to company formation and investment readiness.
+            </p>
+
+            <div class="masthead__actions">
+              <a href="#engage" class="btn btn--primary">
+                Information for Teams, Investors &amp; Donors
+              </a>
+              <a
+                href="https://redcap.link/msfah7gg"
+                target="_blank"
+                class="btn btn--teal"
+              >
+                Complete Community Feedback Survey
+              </a>
+              <a href="#leadership" class="btn btn--secondary">
+                Meet the Leadership Team
+              </a>
+            </div>
+
+            <div class="masthead__facts">
+              <div>
+                <span class="fact-item__value">Stage 1 Incubator</span>
+                <span class="fact-item__label">3&ndash;5 teams selected &middot; 12-week curriculum &amp; non-dilutive team prize</span>
+              </div>
+              <div>
+                <span class="fact-item__value">Stage 2 Accelerator</span>
+                <span class="fact-item__label">Up to 3 ventures &middot; 6-month individualized support &amp; SAFE investment</span>
+              </div>
+              <div>
+                <span class="fact-item__value">Late Nov / Dec 2026</span>
+                <span class="fact-item__label">Program launch and inaugural Tier 1 application opening</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="masthead__panel" aria-label="Program overview summary">
+            <div class="masthead__logo-box">
+              <img
+                src="./assets/launchpad-rocket.png"
+                alt="Neuroscience Institute Launchpad emblem"
+                width="622"
+                height="755"
+                fetchpriority="high"
+                class="masthead__rocket"
+              />
+              <img
+                src="./assets/launchpad-lockup.png"
+                alt="Neuroscience Institute Launchpad | Mass General Brigham"
+                width="827"
+                height="176"
+                fetchpriority="high"
+                class="masthead__lockup"
+              />
+            </div>
+            <div class="masthead__notice">
+              <p style="margin-block-end: 0.65rem;">
+                <strong>Shaping the Program with the NSI Community:</strong> We are actively gathering input on the entrepreneurial support system at Mass General Brigham ahead of our late-November 2026 launch.
+              </p>
+              <p>
+                <a href="https://redcap.link/msfah7gg" target="_blank">
+                  Share your feedback via our REDCap survey &rarr;
+                </a>
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Mission & Program Design -->
+      <section id="mission" class="section">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">Mission &amp; Program Design</span>
+            <h2>A Neuroscience-Specific Pathway from Insight to Venture</h2>
+            <p>
+              Translating breakthroughs in neurological and neurosurgical care requires specialized regulatory, clinical, and engineering expertise. The Launchpad combines four core operational components to bridge academic discovery and venture execution.
+            </p>
+          </div>
+
+          <div class="pillars-ledger">
+            <div class="pillar-entry">
+              <span class="pillar-entry__num">01</span>
+              <h3 class="pillar-entry__title">Neuroscience Expertise</h3>
+              <p class="pillar-entry__text">
+                Scientific, clinical, and translational guidance rooted in the Mass General Brigham neurology, neurosurgery, and neuroscience community.
+              </p>
+            </div>
+
+            <div class="pillar-entry">
+              <span class="pillar-entry__num">02</span>
+              <h3 class="pillar-entry__title">Structured Programming</h3>
+              <p class="pillar-entry__text">
+                A focused weekly curriculum addressing the key clinical, regulatory, intellectual property, and commercial decisions involved in building a venture.
+              </p>
+            </div>
+
+            <div class="pillar-entry">
+              <span class="pillar-entry__num">03</span>
+              <h3 class="pillar-entry__title">Company Building</h3>
+              <p class="pillar-entry__text">
+                Hands-on company-formation guidance, team development, customer and clinical discovery, and preparation for seed or Series A financing.
+              </p>
+            </div>
+
+            <div class="pillar-entry">
+              <span class="pillar-entry__num">04</span>
+              <h3 class="pillar-entry__title">Mentors &amp; Connections</h3>
+              <p class="pillar-entry__text">
+                Direct access to experienced life-sciences and medtech entrepreneurs, business-school collaborators, industry leaders, and early-stage investors.
+              </p>
+            </div>
+          </div>
+
+          <div class="synergy-note">
+            <p>
+              <strong>Institutional Alignment:</strong> The Neuroscience Institute (NSI) provides clinical neuroscience leadership and domain focus, while the NSI Launchpad—working in close partnership with <strong>MGB Innovation</strong>—provides dedicated venture-building curriculum, IP coordination, and commercialization infrastructure.
+            </p>
+            <button
+              type="button"
+              class="btn btn--secondary btn--sm"
+              commandfor="inquiry-modal"
+              command="show-modal"
+            >
+              Contact Program Leadership
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Two-Stage Pathway: Stage 1 Incubator & Stage 2 Accelerator -->
+      <section id="pathway" class="section section--alt">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">Program Architecture</span>
+            <h2>Two-Stage Commercialization Pathway</h2>
+            <p>
+              The Launchpad is structured into two distinct stages so that investigators can enter either with an early clinical or laboratory concept (Stage 1) or with a developing venture that has already demonstrated initial technical or IP progress (Stage 2).
+            </p>
+          </div>
+
+          <div class="pathway-columns">
+            <!-- Stage 1 Incubator -->
+            <article class="pathway-box">
+              <div>
+                <span class="pathway-box__meta">Stage 1 &middot; Tier 1 Pathway</span>
+                <h3 class="pathway-box__title">Stage 1 Incubator</h3>
+                <p class="pathway-box__subtitle">
+                  A structured launch program for early neuroscience company ideas
+                </p>
+              </div>
+
+              <div class="pathway-specs">
+                <div>
+                  <span class="pathway-spec__val">3&ndash;5 Teams</span>
+                  <span class="pathway-spec__lbl">Selected for the inaugural cohort</span>
+                </div>
+                <div>
+                  <span class="pathway-spec__val">~12 Weeks</span>
+                  <span class="pathway-spec__lbl">One structured session each week</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="pathway-section-heading">Eligibility &amp; Entry Criteria</h4>
+                <p style="font-size: var(--text-sm);">
+                  Any Mass General Brigham employee may lead a team with a plausible neuroscience company idea. <strong>No prior intellectual property, prototype, or existing company is required.</strong> Team members and co-founders may come from outside MGB.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="pathway-section-heading">Program Support</h4>
+                <ul class="editorial-list">
+                  <li>Weekly curriculum covering clinical translation, market validation, IP strategy, and regulatory pathways</li>
+                  <li>Access to the NSI Launchpad Mentor Network</li>
+                  <li>Company-formation and founding-team guidance</li>
+                  <li>Curated introductions to domain, technical, and business experts</li>
+                  <li>Pitch preparation culminating in Demo Day</li>
+                </ul>
+              </div>
+
+              <div class="pathway-box__footer">
+                <strong>Expected Outcome:</strong> Teams graduate ready to form—or having formed—a company, with each selected team receiving a non-dilutive prize award.
+              </div>
+            </article>
+
+            <!-- Stage 2 Accelerator -->
+            <article class="pathway-box pathway-box--stage2">
+              <div>
+                <span class="pathway-box__meta">Stage 2 &middot; Tier 2 Pathway</span>
+                <h3 class="pathway-box__title">Stage 2 Accelerator</h3>
+                <p class="pathway-box__subtitle">
+                  Individualized support for ventures that have already shown progress
+                </p>
+              </div>
+
+              <div class="pathway-specs">
+                <div>
+                  <span class="pathway-spec__val">Up to 3 Ventures</span>
+                  <span class="pathway-spec__lbl">In the inaugural accelerator cycle</span>
+                </div>
+                <div>
+                  <span class="pathway-spec__val">~6 Months</span>
+                  <span class="pathway-spec__lbl">Individualized venture acceleration</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="pathway-section-heading">Eligibility &amp; Entry Criteria</h4>
+                <p style="font-size: var(--text-sm);">
+                  Both <strong>Stage 1 Incubator graduates</strong> and <strong>independently recruited MGB neuroscience ventures</strong> may apply. Applicant teams should demonstrate concrete progress toward a company, product prototype, or protected intellectual property.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="pathway-section-heading">Accelerator Support &amp; SAFE Investment</h4>
+                <ul class="editorial-list">
+                  <li>Tailored 6-month commercialization and milestone guidance</li>
+                  <li>Strategic introductions to venture investors, industry partners, and executive talent</li>
+                  <li>Seed and Series A financing preparation and data-room readiness</li>
+                  <li>Dedicated Investor Pitch Day with biotech, medtech, and digital health investors</li>
+                  <li><strong>SAFE-Based Investment:</strong> Structured via a Simple Agreement for Future Equity (SAFE) in coordination with MGB Innovation so NSI shares in long-term upside while maintaining disciplined per-team capital deployment</li>
+                </ul>
+              </div>
+
+              <div class="pathway-box__footer">
+                <strong>Expected Outcome:</strong> Ventures complete the program positioned for external institutional seed or Series A financing and strategic partnerships.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Launch Schedule & Program Governance -->
+      <section id="schedule" class="section">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">Timeline &amp; Governance</span>
+            <h2>2026&ndash;2027 Launch Schedule &amp; External Advisory Structure</h2>
+            <p>
+              The NSI Launchpad is preparing for formal launch and opening of Tier 1 applications in late November and December 2026, supported by an external Advisory Board and operational Mentor Network.
+            </p>
+          </div>
+
+          <div class="schedule-table-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col" style="inline-size: 14rem;">Target Window</th>
+                  <th scope="col" style="inline-size: 18rem;">Milestone</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="schedule-date">Now (Fall 2026)</td>
+                  <td><strong>Community Feedback &amp; Design</strong></td>
+                  <td>
+                    Gathering feedback from MGB faculty, clinicians, trainees, and staff on the current entrepreneurial support system via our <a href="https://redcap.link/msfah7gg" target="_blank">REDCap community survey</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="schedule-date">Late Nov / Dec 2026</td>
+                  <td><strong>Program Launch &amp; Tier 1 Open</strong></td>
+                  <td>
+                    Official launch of the MGB NSI Launchpad and opening of inaugural Tier 1 (Stage 1 Incubator) team applications.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="schedule-date">January 2027</td>
+                  <td><strong>Tier 1 Selection Decisions</strong></td>
+                  <td>
+                    Selection of 3&ndash;5 neuroscience teams for the inaugural Stage 1 Incubator cohort.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="schedule-date">March &ndash; April 2027</td>
+                  <td><strong>Stage 1 Cohort Begins</strong></td>
+                  <td>
+                    Commencement of the 12-week weekly incubator curriculum, Mentor Network pairing, and Demo Day preparation.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="schedule-date">June 2027</td>
+                  <td><strong>Tier 2 Applications Open</strong></td>
+                  <td>
+                    Opening of applications for the Stage 2 Accelerator (up to 3 ventures for 6 months of individualized acceleration and SAFE investment).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="governance-split">
+            <div class="governance-card">
+              <span class="section-kicker">Strategic Oversight</span>
+              <h3>NSI Launchpad Advisory Board</h3>
+              <p>
+                Comprises approximately eight senior members from outside academia—bringing expertise in <strong>venture capital</strong>, <strong>company formation</strong>, <strong>legal and IP strategy</strong>, and <strong>strategic industry partnerships</strong>—alongside representation from <strong>MGB Innovation</strong>. The Advisory Board convenes quarterly to guide program strategy and venture selection.
+              </p>
+            </div>
+
+            <div class="governance-card">
+              <span class="section-kicker">Operational Guidance</span>
+              <h3>Launchpad Mentor Network</h3>
+              <p>
+                A dedicated network of founders, biotech and medical-device operators, regulatory specialists, and business-school collaborators who work directly with participating Stage 1 and Stage 2 teams on day-to-day company building and commercialization milestones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faculty & Executive Leadership Directory -->
+      <section id="leadership" class="section section--alt">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">Program Governance</span>
+            <h2>Leadership Team</h2>
+            <p>
+              The NSI Launchpad is led by physician-scientists, neurotechnology innovators, MBA-trained clinician-investigators, and executive leaders across Massachusetts General Hospital, Brigham and Women&rsquo;s Hospital, Harvard Medical School, and the Mass General Brigham Neuroscience Institute.
+            </p>
+          </div>
+
+          <div class="faculty-directory">
+            <!-- 1. Sydney S. Cash, MD, PhD -->
+            <article class="faculty-row">
+              <img
+                src="./assets/sydney-cash.jpg"
+                alt="Sydney S. Cash, MD, PhD"
+                width="393"
+                height="393"
+                loading="lazy"
+                class="faculty-portrait"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">Director &middot; Neurology</span>
+                  <h3 class="faculty-name">Sydney S. Cash, MD, PhD</h3>
+                  <p class="faculty-titles">
+                    Chief, Division of Epilepsy &amp; Clinical Neurophysiology, Mass General Brigham &middot; Professor of Neurology, Harvard Medical School &middot; Co-Director, Center for Neurotechnology and Neurorecovery (CNTR), MGH
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Translational &amp; Entrepreneurial Background:</strong> Dr. Cash is a Co-Principal Investigator in the multi-institutional <strong>BrainGate</strong> intracortical brain-computer interface (BCI) clinical consortium, advancing implantable neural interfaces that restore communication and motor function in patients with paralysis and ALS. At MGH, he co-directs the Center for Neurotechnology and Neurorecovery (CNTR) and the Neurotechnology Trials Unit, and holds multiple patents spanning spatiotemporal seizure prediction algorithms, high-density microelectrode recording arrays (&mu;ECoG and human Neuropixels), closed-loop neurostimulation, and implantable neural telemetry.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Clinical Record:</strong> Dr. Cash earned his MD and PhD in Neurobiology from Columbia University and completed his Neurology residency, Chief residency, and Epilepsy/EEG fellowship at Massachusetts General Hospital and Brigham and Women&rsquo;s Hospital. He serves as Founding Director of the NeuroHINTS Labs and Professor of Neurology at Harvard Medical School, and has authored more than 200 peer-reviewed publications in <em>Science</em>, <em>Nature</em>, <em>Nature Neuroscience</em>, <em>Nature Medicine</em>, and <em>Brain</em> supported by NIH/NINDS R01, U01, and K24 awards.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://pnhadar.github.io/ndm-website1/people/" target="_blank">NeuroHINTS Labs Profile &rarr;</a>
+                  <a href="https://www.cntr.mgh.harvard.edu/" target="_blank">MGH Center for Neurotechnology &amp; Neurorecovery &rarr;</a>
+                  <a href="https://www.braingate.org/" target="_blank">BrainGate Consortium &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Peter N. Hadar, MD, MSc -->
+            <article class="faculty-row">
+              <img
+                src="./assets/peter-hadar.png"
+                alt="Peter N. Hadar, MD, MSc"
+                width="520"
+                height="680"
+                loading="lazy"
+                class="faculty-portrait"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">Associate Director &middot; Neurology</span>
+                  <h3 class="faculty-name">Peter N. Hadar, MD, MSc</h3>
+                  <p class="faculty-titles">
+                    Instructor in Neurology, Harvard Medical School &middot; Clinician-Investigator, MGH &amp; BWH Division of Epilepsy &middot; Principal Investigator, Hadar Lab (MGH CNTR &amp; NeuroHINTS)
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Translational &amp; Entrepreneurial Background:</strong> Dr. Hadar completed formal training in medical device commercialization and translational venture design through his <strong>Master of Science in Translational Research (MSc)</strong> at the University of Pennsylvania. He directs the Hadar Lab within MGH CNTR and NeuroHINTS, where his group develops machine-learning neurophysiological biomarkers, personalized intracranial neuromodulation targeting atlases (RNS and DBS), NeuroEconomics frameworks of human decision-making, and clinical deployment architectures for generative AI and large language models in neurology.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Clinical Record:</strong> Dr. Hadar graduated <em>cum laude</em> from <strong>Harvard University</strong> (AB, 2013), earned his MD and MSc at the <strong>University of Pennsylvania Perelman School of Medicine</strong> (2018), and completed his Neurology residency at the Hospital of the University of Pennsylvania (2022) followed by his Clinical Epilepsy fellowship at Massachusetts General Hospital (2024). His research is supported by the <strong>NIH NINDS K23 Grant</strong>, the <strong>NIH NINDS R25/UE5 Grant</strong>, the <strong>AAN/AES/ABF Susan Spencer Clinical Research Training Scholarship</strong>, and the <strong>American Brain Foundation Next Generation Research Grant</strong>, with peer-reviewed work published in <em>Science Translational Medicine</em> and <em>Brain</em>.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://pnhadar.github.io/ndm-website1/people/" target="_blank">NeuroHINTS Labs Profile &rarr;</a>
+                  <a href="https://www.cntr.mgh.harvard.edu/our-team/peter-hadar%2C-md%2C-ms" target="_blank">MGH CNTR Profile &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Jennifer Morganroth, MD, MBA -->
+            <article class="faculty-row">
+              <img
+                src="./assets/jennifer-morganroth.jpg"
+                alt="Jennifer Morganroth, MD, MBA"
+                width="682"
+                height="1024"
+                loading="lazy"
+                class="faculty-portrait"
+                style="object-position: center 18%;"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">Clinical Innovation &amp; Strategic Partnerships &middot; Neurology</span>
+                  <h3 class="faculty-name">Jennifer Morganroth, MD, MBA</h3>
+                  <p class="faculty-titles">
+                    Instructor in Neurology, Harvard Medical School &middot; Attending Neurologist, ALS &amp; Neuromuscular Division, Massachusetts General Hospital
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Translational &amp; Entrepreneurial Background:</strong> Dr. Morganroth earned her <strong>MBA in Health Care Management from the Wharton School</strong> alongside her MD at the University of Pennsylvania, where she worked on medical device development and commercialization centered on <strong>brain-computer interfaces (BCIs)</strong>. At Massachusetts General Hospital, she leads clinical innovation and care-delivery infrastructure for novel <strong>gene-targeted and antisense therapies in amyotrophic lateral sclerosis (ALS)</strong>—including <em>SOD1</em>-ALS and pre-symptomatic genetic carriers—building strategic partnerships with biopharma and neurotechnology collaborators.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Clinical Record:</strong> Dr. Morganroth received her BA in Economics and English (2013) and dual MD/MBA (2020) from the University of Pennsylvania, completed her Internal Medicine internship and Neurology residency at the Hospital of the University of Pennsylvania (2024), and completed her Clinical Neurophysiology/EMG fellowship at Columbia University Irving Medical Center / NewYork-Presbyterian (2025). Her scholarship examines healthcare utilization, care delivery in myasthenia gravis, and clinical readiness for precision neuromuscular therapeutics.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://neuroresidency.uphs.upenn.edu/residents/2024/jennifer-morganroth-md-mba/" target="_blank">UPenn Profile &rarr;</a>
+                  <a href="https://www.linkedin.com/in/jennifer-morganroth-md-mba-80a1b635" target="_blank">LinkedIn Profile &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. William Brian Gormley, MD, MPH, MBA -->
+            <article class="faculty-row">
+              <img
+                src="./assets/william-gormley.jpg"
+                alt="William Brian Gormley, MD, MPH, MBA"
+                width="566"
+                height="487"
+                loading="lazy"
+                class="faculty-portrait"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">Industry &amp; Technology &middot; Neurosurgery</span>
+                  <h3 class="faculty-name">William Brian Gormley, MD, MPH, MBA</h3>
+                  <p class="faculty-titles">
+                    Associate Professor of Neurosurgery, Harvard Medical School &middot; Director of Neurosurgical Critical Care &amp; Director of Neurosurgical Innovation, Brigham and Women&rsquo;s Hospital &middot; Surgical Director, Neuroscience Intensive Care, Dana-Farber Cancer Institute
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Translational &amp; Entrepreneurial Background:</strong> Dr. Gormley is <strong>Co-Founder and Director of Neurosurgical Innovation at Zeta Surgical</strong>, a venture-backed Harvard spinout developing mixed-reality, AI-enabled cranial navigation and robotic surgical and TMS guidance systems designed to bring sub-millimeter precision to bedside and acute care. He also serves as Clinical and Scientific Advisor to <strong>Coagulo Medical Technologies</strong> (point-of-care precision coagulation diagnostics), combining executive management training from the <strong>MIT Sloan School of Management (MBA)</strong> with health-systems analytics from the <strong>Harvard T.H. Chan School of Public Health (MPH)</strong>.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Clinical Record:</strong> Double board-certified in Neurological Surgery and Surgical Critical Care, Dr. Gormley is Associate Professor of Neurosurgery at Harvard Medical School, Director of Neurosurgical Critical Care at Brigham and Women&rsquo;s Hospital, and Co-Director of the Cushing Neurosurgical Outcomes Center and Computational Neurosurgery Outcomes Center, leading machine-learning clinical outcomes research and fluid biomarker discovery in traumatic brain injury and neurocritical care.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://www.dana-farber.org/find-a-doctor/william-brian-gormley" target="_blank">Dana-Farber Faculty Profile &rarr;</a>
+                  <a href="https://www.coagulomed.com/clinical-and-scientific-advisors" target="_blank">Coagulo Medical Advisory Profile &rarr;</a>
+                  <a href="https://www.linkedin.com/in/william-brian-gormley-md-mph-mba-5b744b19" target="_blank">LinkedIn Profile &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Meghan D. Kotarski, MBA -->
+            <article class="faculty-row">
+              <img
+                src="./assets/meghan-kotarski.png"
+                alt="Meghan D. Kotarski, MBA"
+                width="250"
+                height="250"
+                loading="lazy"
+                class="faculty-portrait"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">NSI Executive Liaison</span>
+                  <h3 class="faculty-name">Meghan D. Kotarski, MBA</h3>
+                  <p class="faculty-titles">
+                    Chief Administrator, Mass General Brigham Neuroscience Institute &middot; Former Administrative Director of Clinical Operations &amp; New Initiatives, MGH Department of Neurology
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Executive &amp; Institutional Innovation Background:</strong> Recognized by <em>The Women We Admire</em> among leading healthcare executives nationally, Ms. Kotarski serves as <strong>Chief Administrator of the Mass General Brigham Neuroscience Institute</strong>. Working alongside the NSI Executive Director and department chairs across MGH and BWH, she leads enterprise strategic planning, new clinical and translational venture launches, resource allocation, and cross-institutional operational integration.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Health-Systems Record:</strong> Prior to her institute-wide role, Ms. Kotarski served as Administrative Director of Clinical Operations and New Initiatives in the MGH Department of Neurology, launching multi-site specialty access programs and clinical trial operations. She is a co-author on peer-reviewed health-services research in <em>Neurology</em> and <em>The Permanente Journal</em> evaluating integrated specialist care models and academic neurology operations.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://thewomenweadmire.com/leaders/meghan-kotarski/" target="_blank">The Women We Admire Profile &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Kasey O'Keefe -->
+            <article class="faculty-row">
+              <img
+                src="./assets/kasey-okeefe.png"
+                alt="Kasey O'Keefe"
+                width="200"
+                height="200"
+                loading="lazy"
+                class="faculty-portrait"
+              />
+              <div>
+                <div class="faculty-header">
+                  <span class="faculty-role">MGB Executive Liaison</span>
+                  <h3 class="faculty-name">Kasey O&rsquo;Keefe</h3>
+                  <p class="faculty-titles">
+                    Senior Director of Business Operations, Mass General Brigham Neuroscience Institute
+                  </p>
+                </div>
+                <div class="faculty-bio">
+                  <p>
+                    <strong>Business Operations &amp; Venture Governance:</strong> As <strong>Senior Director of Business Operations for the Mass General Brigham Neuroscience Institute</strong>, Ms. O&rsquo;Keefe oversees enterprise business strategy, financial modeling, capital planning, and operational governance across MGB&rsquo;s neuroscience departments. For the NSI Launchpad, she coordinates institutional alignment between the Neuroscience Institute, MGB Innovation, finance, and system leadership to support Stage 1 Incubator awards and Stage 2 SAFE investments.
+                  </p>
+                  <p>
+                    <strong>Academic &amp; Clinical Operations Record:</strong> Ms. O&rsquo;Keefe is a co-author of peer-reviewed clinical operations research in <em>Neurology</em> (2025)—<em>&ldquo;Neurology Access Clinic: A Study of Neurologist and Advanced Practice Provider Collaboration in a Tertiary Academic Setting&rdquo;</em>—establishing the operational framework of the Mass General Brigham Neurology Access Team (NeAT) clinic model, alongside leadership across MGH Memory and Movement Disorders programs.
+                  </p>
+                </div>
+                <div class="faculty-links">
+                  <a href="https://www.linkedin.com/in/kaseylynnokeefe" target="_blank">LinkedIn Profile &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engage: Prospective Venture Teams, Investors & Philanthropy -->
+      <section id="engage" class="section">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">Collaborate With the Launchpad</span>
+            <h2>Participate as a Team, Investor, Mentor, or Philanthropic Partner</h2>
+            <p>
+              The NSI Launchpad brings together Mass General Brigham investigators, external co-founders, venture investors, and philanthropic donors to advance new therapies, medical devices, diagnostics, and clinical AI tools for neurological and neurosurgical patients.
+            </p>
+          </div>
+
+          <div class="engagement-grid">
+            <!-- 1. Launch Your Neuroscience Venture (Teams & Community Survey) -->
+            <article class="engagement-column engagement-column--survey">
+              <span class="section-kicker" style="margin-block-end: 0;">For MGB Faculty, Trainees, Staff &amp; Co-Founders</span>
+              <h3>Launch Your Neuroscience Venture</h3>
+              <p>
+                Whether you have an early clinical insight with no prior IP (Stage 1 Incubator) or an emerging spinout with prototype or patent progress (Stage 2 Accelerator), the NSI Launchpad provides the curriculum, mentorship, and funding pathway to move forward.
+              </p>
+
+              <div class="survey-callout">
+                <strong>Community Feedback Survey:</strong> We are still shaping to the MGB NSI community, and we would love to hear your feedback on the current entrepreneurial support system at MGB:
+                <div style="margin-block-start: 0.45rem;">
+                  <a href="https://redcap.link/msfah7gg" target="_blank" style="font-weight: 700;">
+                    https://redcap.link/msfah7gg &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <ul class="editorial-list">
+                <li><strong>Open Across MGB:</strong> Any MGB employee may lead a Stage 1 team; external technical and business team members are welcome.</li>
+                <li><strong>Co-Founder Matching:</strong> External operators, engineers, and business-school collaborators may register interest in joining an MGB team.</li>
+              </ul>
+
+              <div class="engagement-column__cta">
+                <a
+                  href="https://redcap.link/msfah7gg"
+                  target="_blank"
+                  class="btn btn--teal btn--sm"
+                >
+                  Take Feedback Survey
+                </a>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--sm"
+                  data-inquiry-option="Prospective Venture Team (Stage 1 / Stage 2)"
+                >
+                  Register Team Interest
+                </button>
+              </div>
+            </article>
+
+            <!-- 2. Venture Investors, Mentors & Strategic Partners -->
+            <article class="engagement-column">
+              <span class="section-kicker" style="margin-block-end: 0;">For Investors, Mentors &amp; Industry</span>
+              <h3>Co-Invest &amp; Mentor Emerging Ventures</h3>
+              <p>
+                Engage directly with pre-vetted neurology and neurosurgery spinouts emerging from Massachusetts General Hospital, Brigham and Women&rsquo;s Hospital, and Harvard Medical School.
+              </p>
+              <ul class="editorial-list">
+                <li><strong>Stage 2 Investor Pitch Day:</strong> Connect with accelerated MGB ventures prepared for Seed and Series A financing.</li>
+                <li><strong>SAFE Investment Framework:</strong> Streamlined Stage 2 SAFE structure coordinated in partnership with MGB Innovation.</li>
+                <li><strong>Advisory &amp; Mentor Network:</strong> Contribute domain, regulatory, company-formation, or venture expertise to cohort teams.</li>
+              </ul>
+              <div class="engagement-column__cta">
+                <button
+                  type="button"
+                  class="btn btn--primary btn--sm"
+                  data-inquiry-option="Venture Investor / Industry Partner / Mentor Network"
+                >
+                  Inquire as Investor or Mentor
+                </button>
+              </div>
+            </article>
+
+            <!-- 3. Philanthropic Support -->
+            <article class="engagement-column">
+              <span class="section-kicker" style="margin-block-end: 0;">For Philanthropic Partners</span>
+              <h3>Philanthropic Support &amp; Program Naming</h3>
+              <p>
+                Traditional research grants rarely fund company formation, regulatory preparation, or prototype engineering. Philanthropic support enables MGB discoveries to bridge early translational gaps and attract follow-on venture investment.
+              </p>
+              <ul class="editorial-list">
+                <li><strong>Stage 1 Prizes &amp; Cohort Support:</strong> Underwrite non-dilutive team awards, curriculum delivery, and annual Demo Day.</li>
+                <li><strong>Stage 2 Venture Pool:</strong> Support Stage 2 SAFE investments where long-term returns help sustain future MGB neuroscience ventures.</li>
+                <li><strong>Disease-Focused Innovation:</strong> Direct support toward ALS, epilepsy, neuro-oncology, stroke, neurocritical care, or neurodegeneration.</li>
+              </ul>
+              <div class="engagement-column__cta">
+                <button
+                  type="button"
+                  class="btn btn--primary btn--sm"
+                  data-inquiry-option="Philanthropic Giving &amp; Program Partnership"
+                >
+                  Discuss Philanthropic Support
+                </button>
+                <a
+                  href="https://giving.massgeneral.org/"
+                  target="_blank"
+                  class="btn btn--secondary btn--sm"
+                >
+                  MGB Giving
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Native Inquiry Modal -->
+    <dialog class="inquiry-dialog" id="inquiry-modal" closedby="any" aria-labelledby="inquiry-modal-title">
+      <div class="inquiry-dialog__body">
+        <div class="inquiry-dialog__top">
+          <div>
+            <span class="section-kicker" style="margin-block-end: 0.25rem;">MGB NSI Launchpad</span>
+            <h2 id="inquiry-modal-title" style="font-size: var(--text-xl);">
+              Contact Program Leadership
+            </h2>
+          </div>
+          <button
+            type="button"
+            class="dialog-close"
+            commandfor="inquiry-modal"
+            command="close"
+            aria-label="Close inquiry dialog"
+          >
+            Close
+          </button>
+        </div>
+
+        <form id="inquiry-form">
+          <div class="form-field">
+            <label for="inquiry-type">Area of Interest</label>
+            <select id="inquiry-type" name="type" class="form-input" required>
+              <option value="Prospective Venture Team (Stage 1 / Stage 2)">
+                Prospective Venture Team (Stage 1 / Stage 2)
+              </option>
+              <option value="Venture Investor / Industry Partner / Mentor Network">
+                Venture Investor / Industry Partner / Mentor Network
+              </option>
+              <option value="Philanthropic Giving &amp; Program Partnership">
+                Philanthropic Giving &amp; Program Partnership
+              </option>
+              <option value="External Co-Founder / Operator Matching">
+                External Co-Founder / Operator Matching
+              </option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="inquiry-name">Full Name &amp; Credentials</label>
+            <input
+              type="text"
+              id="inquiry-name"
+              name="name"
+              autocomplete="name"
+              required
+              class="form-input"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="inquiry-email">Email Address</label>
+            <input
+              type="email"
+              id="inquiry-email"
+              name="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+              class="form-input"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="inquiry-org">Department, Hospital, or Organization</label>
+            <input
+              type="text"
+              id="inquiry-org"
+              name="organization"
+              autocomplete="organization"
+              class="form-input"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="inquiry-notes">Message</label>
+            <textarea
+              id="inquiry-notes"
+              name="notes"
+              rows="4"
+              required
+              class="form-input"
+            ></textarea>
+          </div>
+
+          <p
+            id="inquiry-status"
+            hidden
+            role="status"
+            aria-live="polite"
+            style="font-size: var(--text-xs); color: var(--brand-secondary); margin-block-end: 0.85rem;"
+          ></p>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.65rem;">
+            <button
+              type="button"
+              class="btn btn--secondary btn--sm"
+              commandfor="inquiry-modal"
+              command="close"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn--primary btn--sm">
+              Prepare Email Inquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- Institutional Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <div
+              style="
+                display: inline-block;
+                background-color: #ffffff;
+                padding: 0.4rem 0.75rem;
+                border-radius: 2px;
+                margin-block-end: 0.9rem;
+              "
+            >
+              <img
+                src="./assets/launchpad-lockup.png"
+                alt="Neuroscience Institute Launchpad — Mass General Brigham"
+                width="827"
+                height="176"
+                loading="lazy"
+                style="block-size: 2.15rem; inline-size: auto;"
+              />
+            </div>
+            <p style="max-inline-size: 42ch; color: #c4d5e8; font-size: var(--text-xs);">
+              Mass General Brigham Neuroscience Institute (NSI) Launchpad, developed in partnership with MGB Innovation across Massachusetts General Hospital, Brigham and Women&rsquo;s Hospital, and Harvard Medical School.
+            </p>
+          </div>
+
+          <div>
+            <h3>Program Sections</h3>
+            <ul>
+              <li><a href="#mission">Mission &amp; Four Pillars</a></li>
+              <li><a href="#pathway">Stage 1 Incubator &amp; Stage 2 Accelerator</a></li>
+              <li><a href="#schedule">2026&ndash;2027 Schedule &amp; Governance</a></li>
+              <li><a href="#leadership">Leadership Directory</a></li>
+              <li><a href="#engage">Teams, Investors &amp; Philanthropy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Institutional Resources</h3>
+            <ul>
+              <li><a href="https://redcap.link/msfah7gg" target="_blank">MGB NSI Community Feedback Survey</a></li>
+              <li><a href="https://www.massgeneralbrigham.org/" target="_blank">Mass General Brigham</a></li>
+              <li><a href="https://innovation.massgeneralbrigham.org/" target="_blank">MGB Innovation</a></li>
+              <li><a href="https://www.cntr.mgh.harvard.edu/" target="_blank">MGH Center for Neurotechnology &amp; Neurorecovery</a></li>
+              <li><a href="https://giving.massgeneral.org/" target="_blank">Mass General Brigham Philanthropy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2026 Mass General Brigham Neuroscience Institute Launchpad.</p>
+          <p>Massachusetts General Hospital &middot; Brigham and Women&rsquo;s Hospital &middot; Harvard Medical School</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

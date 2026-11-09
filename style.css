@@ -1,0 +1,966 @@
+/* ==========================================================================
+   Mass General Brigham — Neuroscience Institute Launchpad (nsil2)
+   Institutional Editorial Stylesheet
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Official Mass General Brigham Palette */
+  --mgb-navy-dark: #00225a;
+  --mgb-navy: #003a96;
+  --mgb-teal: #01828e;
+  --mgb-blue: #0066cc;
+
+  /* Semantic Tokens (Light Mode Default) */
+  --bg-page: light-dark(#ffffff, #0b1524);
+  --bg-subtle: light-dark(#f4f7f9, #101e33);
+  --bg-Tint: light-dark(#ebf2f7, #162842);
+  --bg-card: light-dark(#ffffff, #122238);
+
+  --text-main: light-dark(#111c2d, #f0f5fa);
+  --text-body: light-dark(#2c3e55, #cbd8e6);
+  --text-muted: light-dark(#56687f, #94a8be);
+
+  --brand-primary: light-dark(#003a96, #7cb3ff);
+  --brand-secondary: light-dark(#01828e, #4fd8eb);
+  --brand-link: light-dark(#003a96, #7cb3ff);
+
+  --border-hairline: light-dark(#d8e1ea, #243854);
+  --border-strong: light-dark(#003a96, #4fd8eb);
+
+  /* Editorial & Institutional Typography */
+  --font-serif: 'Georgia', 'Times New Roman', Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.78rem, 0.75rem + 0.12vw, 0.84rem);
+  --text-sm: clamp(0.88rem, 0.85rem + 0.15vw, 0.94rem);
+  --text-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.06rem + 0.3vw, 1.275rem);
+  --text-xl: clamp(1.32rem, 1.2rem + 0.55vw, 1.6rem);
+  --text-2xl: clamp(1.65rem, 1.45rem + 0.95vw, 2.2rem);
+  --text-3xl: clamp(2rem, 1.7rem + 1.4vw, 2.85rem);
+
+  --container-max: 74rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  &:has(> head > meta[name="color-scheme"][content="dark"]) {
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  min-block-size: 100dvh;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--brand-link);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: color 120ms ease;
+}
+
+a:hover {
+  color: var(--brand-secondary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-secondary);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 200;
+  inline-size: auto;
+  block-size: auto;
+  clip: auto;
+  padding: 0.6rem 1rem;
+  background-color: var(--mgb-navy);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container {
+  inline-size: min(100% - (var(--gutter) * 2), var(--container-max));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   Institutional Utility Bar & Primary Header
+   ========================================================================== */
+.utility-bar {
+  background-color: var(--mgb-navy-dark);
+  color: #e4edf7;
+  font-size: var(--text-xs);
+  border-block-end: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.utility-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 0.55rem;
+}
+
+.utility-bar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.utility-bar__divider {
+  inline-size: 1px;
+  block-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.utility-bar__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.utility-bar__links a {
+  color: #e4edf7;
+  text-decoration: none;
+}
+
+.utility-bar__links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-header {
+  background-color: var(--bg-page);
+  border-block-end: 1px solid var(--border-hairline);
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 90;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 0.95rem;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.brand-lockup__img {
+  block-size: clamp(2.25rem, 3.4vw, 2.85rem);
+  inline-size: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.35rem;
+  list-style: none;
+}
+
+.site-nav__list a {
+  color: var(--text-main);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  padding-block: 0.25rem;
+}
+
+.site-nav__list a:hover {
+  color: var(--brand-primary);
+  text-decoration: underline;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* ==========================================================================
+   Buttons (Restrained Institutional Style)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 0.65rem 1.2rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.btn--primary {
+  background-color: var(--mgb-navy);
+  color: #ffffff;
+  border-color: var(--mgb-navy);
+}
+
+.btn--primary:hover {
+  background-color: var(--mgb-navy-dark);
+  border-color: var(--mgb-navy-dark);
+  color: #ffffff;
+}
+
+.btn--teal {
+  background-color: var(--mgb-teal);
+  color: #ffffff;
+  border-color: var(--mgb-teal);
+}
+
+.btn--teal:hover {
+  background-color: #016872;
+  border-color: #016872;
+  color: #ffffff;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--brand-primary);
+  border-color: var(--border-hairline);
+}
+
+.btn--secondary:hover {
+  border-color: var(--brand-primary);
+  background-color: var(--bg-subtle);
+  color: var(--brand-primary);
+}
+
+.btn--sm {
+  font-size: var(--text-xs);
+  padding: 0.45rem 0.85rem;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  padding: 0.42rem 0.7rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Hero / Institutional Masthead
+   ========================================================================== */
+.masthead {
+  background-color: var(--bg-subtle);
+  border-block-end: 1px solid var(--border-hairline);
+  padding-block: clamp(2.75rem, 5.5vw, 4.75rem);
+}
+
+.masthead__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 58rem) {
+  .masthead__grid {
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 3.5rem;
+  }
+}
+
+.section-kicker {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-secondary);
+  margin-block-end: 0.65rem;
+}
+
+.masthead__title {
+  font-size: var(--text-3xl);
+  margin-block-end: 1.15rem;
+  color: var(--text-main);
+}
+
+.masthead__lead {
+  font-size: var(--text-lg);
+  color: var(--text-body);
+  max-inline-size: 62ch;
+  margin-block-end: 1.65rem;
+}
+
+.masthead__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block-end: 2rem;
+}
+
+.masthead__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.25rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--border-hairline);
+  font-variant-numeric: tabular-nums;
+}
+
+.fact-item__value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--brand-primary);
+  margin-block-end: 0.15rem;
+}
+
+.fact-item__label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.masthead__panel {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-block-start: 3px solid var(--mgb-navy);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.masthead__logo-box {
+  background-color: #ffffff;
+  border: 1px solid #e3eaf2;
+  padding: 1.5rem;
+  margin-block-end: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.masthead__rocket {
+  inline-size: 5.5rem;
+  block-size: auto;
+}
+
+.masthead__lockup {
+  max-inline-size: 19rem;
+  block-size: auto;
+}
+
+.masthead__notice {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+  border-block-start: 1px solid var(--border-hairline);
+  padding-block-start: 1rem;
+}
+
+/* ==========================================================================
+   Sections & Architectural Layout
+   ========================================================================== */
+.section {
+  padding-block: clamp(3.25rem, 6vw, 5.25rem);
+  border-block-end: 1px solid var(--border-hairline);
+}
+
+.section--alt {
+  background-color: var(--bg-subtle);
+}
+
+.section-intro {
+  max-inline-size: 54rem;
+  margin-block-end: clamp(2rem, 4vw, 3rem);
+}
+
+.section-intro h2 {
+  font-size: var(--text-2xl);
+  margin-block-end: 0.75rem;
+}
+
+.section-intro p {
+  font-size: var(--text-base);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Four Program Pillars (Editorial Ledger Grid)
+   ========================================================================== */
+.pillars-ledger {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.5rem), 1fr));
+  border-block-start: 2px solid var(--brand-primary);
+  border-block-end: 1px solid var(--border-hairline);
+}
+
+.pillar-entry {
+  padding: 1.6rem 1.35rem;
+  border-block-end: 1px solid var(--border-hairline);
+}
+
+@media (min-width: 48rem) {
+  .pillar-entry:not(:last-child) {
+    border-inline-end: 1px solid var(--border-hairline);
+  }
+}
+
+.pillar-entry__num {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--brand-secondary);
+  letter-spacing: 0.06em;
+  margin-block-end: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pillar-entry__title {
+  font-size: var(--text-lg);
+  margin-block-end: 0.55rem;
+}
+
+.pillar-entry__text {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+}
+
+.synergy-note {
+  margin-block-start: 2rem;
+  padding: 1.35rem 1.6rem;
+  background-color: var(--bg-Tint);
+  border-inline-start: 3px solid var(--mgb-teal);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.synergy-note p {
+  font-size: var(--text-sm);
+  max-inline-size: 65ch;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Two-Stage Pathway (Stage 1 Incubator & Stage 2 Accelerator)
+   ========================================================================== */
+.pathway-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: 2rem;
+}
+
+.pathway-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-block-start: 3px solid var(--mgb-navy);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.pathway-box--stage2 {
+  border-block-start-color: var(--mgb-teal);
+}
+
+.pathway-box__meta {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--brand-secondary);
+}
+
+.pathway-box__title {
+  font-size: var(--text-xl);
+  margin-block-start: 0.25rem;
+}
+
+.pathway-box__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-block-start: 0.25rem;
+}
+
+.pathway-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-block: 0.95rem;
+  border-block: 1px solid var(--border-hairline);
+  font-variant-numeric: tabular-nums;
+}
+
+.pathway-spec__val {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--text-main);
+}
+
+.pathway-spec__lbl {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.pathway-section-heading {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  margin-block-end: 0.45rem;
+}
+
+.editorial-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: var(--text-sm);
+}
+
+.editorial-list li {
+  position: relative;
+  padding-inline-start: 1.1rem;
+}
+
+.editorial-list li::before {
+  content: "—";
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--brand-secondary);
+}
+
+.pathway-box__footer {
+  margin-block-start: auto;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--border-hairline);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Launch Schedule & Governance Table
+   ========================================================================== */
+.schedule-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-hairline);
+  background-color: var(--bg-card);
+}
+
+.schedule-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: start;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1rem 1.25rem;
+  border-block-end: 1px solid var(--border-hairline);
+  vertical-align: top;
+}
+
+.schedule-table th {
+  background-color: var(--bg-subtle);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+}
+
+.schedule-table tr:last-child td {
+  border-block-end: none;
+}
+
+.schedule-date {
+  font-weight: 700;
+  color: var(--brand-primary);
+  white-space: nowrap;
+}
+
+.governance-split {
+  margin-block-start: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1.75rem;
+}
+
+.governance-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  padding: 1.5rem 1.75rem;
+}
+
+.governance-card h3 {
+  font-size: var(--text-lg);
+  margin-block-end: 0.5rem;
+}
+
+.governance-card p {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+}
+
+/* ==========================================================================
+   Faculty & Executive Leadership Directory
+   ========================================================================== */
+.faculty-directory {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.faculty-row {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 44rem) {
+  .faculty-row {
+    grid-template-columns: 9.5rem 1fr;
+    gap: 2rem;
+  }
+}
+
+.faculty-portrait {
+  inline-size: 8.5rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border-hairline);
+  background-color: var(--bg-subtle);
+}
+
+@media (min-width: 44rem) {
+  .faculty-portrait {
+    inline-size: 9.5rem;
+  }
+}
+
+.faculty-header {
+  border-block-end: 1px solid var(--border-hairline);
+  padding-block-end: 0.75rem;
+  margin-block-end: 0.9rem;
+}
+
+.faculty-role {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-secondary);
+  margin-block-end: 0.2rem;
+}
+
+.faculty-name {
+  font-size: var(--text-xl);
+  color: var(--text-main);
+}
+
+.faculty-titles {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-block-start: 0.25rem;
+  line-height: 1.45;
+}
+
+.faculty-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-size: var(--text-sm);
+  color: var(--text-body);
+}
+
+.faculty-links {
+  margin-block-start: 0.95rem;
+  padding-block-start: 0.75rem;
+  border-block-start: 1px solid var(--border-hairline);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Engagement: Teams, Venture Investors & Philanthropy
+   ========================================================================== */
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1.75rem;
+}
+
+.engagement-column {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-block-start: 3px solid var(--mgb-navy);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.engagement-column--survey {
+  border-block-start-color: var(--mgb-teal);
+}
+
+.engagement-column h3 {
+  font-size: var(--text-xl);
+}
+
+.engagement-column p {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+}
+
+.survey-callout {
+  background-color: var(--bg-Tint);
+  border-inline-start: 3px solid var(--mgb-teal);
+  padding: 1rem 1.15rem;
+  font-size: var(--text-sm);
+  color: var(--text-main);
+}
+
+.engagement-column__cta {
+  margin-block-start: auto;
+  padding-block-start: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+/* ==========================================================================
+   Inquiry Dialog & Footer
+   ========================================================================== */
+.inquiry-dialog {
+  margin: auto;
+  inline-size: min(92vw, 38rem);
+  border: 1px solid var(--border-hairline);
+  border-block-start: 4px solid var(--mgb-navy);
+  background-color: var(--bg-card);
+  color: var(--text-body);
+  padding: 0;
+}
+
+.inquiry-dialog::backdrop {
+  background-color: rgba(8, 18, 34, 0.55);
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.inquiry-dialog__body {
+  padding: 1.75rem;
+}
+
+.inquiry-dialog__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block-end: 1rem;
+  margin-block-end: 1.25rem;
+  border-block-end: 1px solid var(--border-hairline);
+}
+
+.dialog-close {
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-muted);
+  padding: 0.3rem 0.6rem;
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.form-field {
+  margin-block-end: 1rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-main);
+  margin-block-end: 0.3rem;
+}
+
+.form-input {
+  inline-size: 100%;
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-hairline);
+  border-radius: 2px;
+}
+
+.site-footer {
+  background-color: var(--mgb-navy-dark);
+  color: #d6e2f0;
+  padding-block: 3rem 2.25rem;
+  font-size: var(--text-sm);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  padding-block-end: 2rem;
+  border-block-end: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.site-footer h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  margin-block-end: 0.75rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.site-footer a {
+  color: #d6e2f0;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-footer__bottom {
+  padding-block-start: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: var(--text-xs);
+  color: #9ab0c7;
+}
